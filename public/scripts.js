@@ -1,4 +1,4 @@
-const baseUrl = 'http://api.airvisual.com/v2/';
+const baseUrl = 'https://api.airvisual.com/v2/';
 const key = '923d352f-e187-47c0-9271-9f7ae9884c85';
 let url = baseUrl + 'nearest_city?key=' + key 
 
