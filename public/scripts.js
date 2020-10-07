@@ -1,4 +1,14 @@
-const baseUrl = 'https://api.airvisual.com/v2/';
+// getting mixed-content error from the api 
+// check to see if we are running locally or on the server
+// if on server we need to be secure and use https
+// if local we use http
+let protocol = 'https';
+if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
+    protocol = 'http'
+} 
+console.log(location)
+
+const baseUrl = protocol + '://api.airvisual.com/v2/';
 const key = '923d352f-e187-47c0-9271-9f7ae9884c85';
 let url = baseUrl + 'nearest_city?key=' + key 
 
